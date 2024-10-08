@@ -1,0 +1,16 @@
+*.json
+*.txt
+*.meta
+.vscode/
+Library/
+Logs/
+Packages/
+ProjectSettings/
+Temp/
+UserSettings/
+AyundaRisu/
+MMD4Mecanim/
+Scenes/
+Assembly-CSharp.csproj
+Assembly-CSharp-Editor.csproj
+My project.sln
