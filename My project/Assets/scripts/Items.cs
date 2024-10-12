@@ -14,6 +14,6 @@ public class TodoItem
 public class ScheduleItem
 {
     public string title;
-    public DateTime dueDate;
-    public DateTime alarm;
+    public DateTime Deadline;
+    public DateTime Alarm;
 }
