@@ -37,7 +37,7 @@ public class BoneController : MonoBehaviour
         Mathf.Abs(Turn_Propotional_bias / 2 * mouse.x) <= 5f ? Turn_Propotional_bias /2 * mouse.x : 5f * Mathf.Sign(mouse.x));
 
         setBone("腰",
-        Mathf.Abs(Turn_Propotional_bias / 2 * -mosue.y) <= 3f ? Turn_Propotional_bias / 2 * -mouse.y : 3f * -Mathf.Sign(mouse.y),
+        Mathf.Abs(Turn_Propotional_bias / 2 * -mouse.y) <= 3f ? Turn_Propotional_bias / 2 * -mouse.y : 3f * -Mathf.Sign(mouse.y),
         Mathf.Abs(Turn_Propotional_bias / 2 * -mouse.x) <= 10f ? Turn_Propotional_bias / 2 * -mouse.x : 10f * -Mathf.Sign(mouse.x),
         Mathf.Abs(Turn_Propotional_bias / 2 * mouse.x) <= 5f ? Turn_Propotional_bias / 2 * mouse.x : 5f * Mathf.Sign(mouse.x));
     }
