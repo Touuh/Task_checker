@@ -20,6 +20,16 @@ public class BoneController : MonoBehaviour
         foreach (var tmp in model.boneList){
             boneIndex.Add(tmp.boneData.nameJp, tmp.boneID); //Boneの名前とインデックスをすべて登録
         }
+
+        setBone("右腕",
+        0,
+        0,
+        -30);
+
+        setBone("左腕",
+        0,
+        0,
+        30);
     }
 
     // Update is called once per frame
@@ -37,11 +47,17 @@ public class BoneController : MonoBehaviour
         Mathf.Abs(Turn_Propotional_bias / 2 * mouse.x) <= 5f ? Turn_Propotional_bias /2 * mouse.x : 5f * Mathf.Sign(mouse.x));
 
         setBone("首",
-        Mathf.Abs(Turn_Propotional_bias / 2 * -mouse.y) <= 3f ? Turn_Propotional_bias / 2 * -mouse.y : 3f * -Mathf.Sign(mouse.y),
-        Mathf.Abs(Turn_Propotional_bias / 2 * -mouse.x) <= 10f ? Turn_Propotional_bias / 2 * -mouse.x : 10f * -Mathf.Sign(mouse.x),
-        Mathf.Abs(Turn_Propotional_bias / 2 * mouse.x) <= 5f ? Turn_Propotional_bias / 2 * mouse.x : 5f * Mathf.Sign(mouse.x));
+        Mathf.Abs(Turn_Propotional_bias / 2 * -mouse.y) <= 6f ? Turn_Propotional_bias / 2 * -mouse.y : 6f * -Mathf.Sign(mouse.y),
+        Mathf.Abs(Turn_Propotional_bias / 2 * -mouse.x) <= 18f ? Turn_Propotional_bias / 2 * -mouse.x : 18f * -Mathf.Sign(mouse.x),
+        Mathf.Abs(Turn_Propotional_bias / 2 * mouse.x) <= 9f ? Turn_Propotional_bias / 2 * mouse.x : 9f * Mathf.Sign(mouse.x));
+
+        setBone("上半身",
+        Mathf.Abs(Turn_Propotional_bias / 2 * -mouse.y) <= 2f ? Turn_Propotional_bias / 2 * -mouse.y : 2f * -Mathf.Sign(mouse.y),
+        Mathf.Abs(Turn_Propotional_bias / 2 * -mouse.x) <= 6f ? Turn_Propotional_bias / 2 * -mouse.x : 6f * -Mathf.Sign(mouse.x),
+        Mathf.Abs(Turn_Propotional_bias / 2 * mouse.x) <= 3f ? Turn_Propotional_bias / 2 * mouse.x : 3f * Mathf.Sign(mouse.x));
     }
 
+    //Boneの名前と数値を与えると動かしてくれる
     void setBone(string name, float x, float y, float z){
         Vector4 value = new Vector3(x, y, z);
         model.boneList[boneIndex[name]].userEulerAngles = value;
