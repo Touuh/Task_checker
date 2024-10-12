@@ -17,6 +17,8 @@ public class MorphController : MonoBehaviour
         foreach (var tmp in morph) {
             morphIndex.Add(tmp.morphData.nameJp, i++);
         }
+
+        setMorph("ハイライト消", 1);
     }
 
     void Update() {
