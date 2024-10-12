@@ -1,4 +1,6 @@
-*.json
+extensions.json
+launch.json
+settings.json
 *.meta
 .vscode/
 Library/
