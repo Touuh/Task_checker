@@ -25,6 +25,8 @@ public class BoneController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        int screenX = Screen.width;
+        int screenY = Screen.height;
         Vector3 mouse = Input.mousePosition;
         mouse.x = mouse.x / screenX *2 -1;
         mouse.y = mouse.y / screenY *2 -1;
