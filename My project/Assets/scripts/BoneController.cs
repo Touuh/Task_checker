@@ -10,7 +10,7 @@ public class BoneController : MonoBehaviour
     Dictionary<string, int> boneIndex = new Dictionary<string, int>(); // Boneの名前とインデックスを入れるところ
     HashSet<int> changedBoneIndex = new HashSet<int>();
 
-    float Turn_Propotional_bias = 6.0f;
+    float Turn_Propotional_bias = 4.5f;
 
     // Start is called before the first frame update
     void Start()
@@ -36,7 +36,7 @@ public class BoneController : MonoBehaviour
         Mathf.Abs(Turn_Propotional_bias * -mouse.x) <= 10f ? Turn_Propotional_bias * -mouse.x : 10f * Mathf.Sign(mouse.x),
         Mathf.Abs(Turn_Propotional_bias / 2 * mouse.x) <= 5f ? Turn_Propotional_bias /2 * mouse.x : 5f * Mathf.Sign(mouse.x));
 
-        setBone("腰",
+        setBone("首",
         Mathf.Abs(Turn_Propotional_bias / 2 * -mouse.y) <= 3f ? Turn_Propotional_bias / 2 * -mouse.y : 3f * -Mathf.Sign(mouse.y),
         Mathf.Abs(Turn_Propotional_bias / 2 * -mouse.x) <= 10f ? Turn_Propotional_bias / 2 * -mouse.x : 10f * -Mathf.Sign(mouse.x),
         Mathf.Abs(Turn_Propotional_bias / 2 * mouse.x) <= 5f ? Turn_Propotional_bias / 2 * mouse.x : 5f * Mathf.Sign(mouse.x));
