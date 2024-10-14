@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Scripting.APIUpdating;
 
 public class MorphController : MonoBehaviour
 {
@@ -30,6 +32,9 @@ public class MorphController : MonoBehaviour
         mouse.y = mouse.y / screenY * 2 - 1;
         Debug.Log(Input.mousePosition);
         setMorph("瞳_上", mouse.y);
+        setMorph("あ", mouse.y * (float)0.55);
+        setMorph("う", mouse.y * (float)0.15);
+        setMorph("え", mouse.y * (float)0.24);
         setMorph("瞳_下", -mouse.y);
         setMorph("瞳_左", mouse.x);
         setMorph("瞳_右", -mouse.x);
