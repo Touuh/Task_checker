@@ -20,14 +20,13 @@ public class MorphController : MonoBehaviour
             morphIndex.Add(tmp.morphData.nameJp, i++);
         }
 
-        setMorph("ハイライト消", 1);
+        //setMorph("ハイライト消", 1);
     }
 
     void Update() {
         int screenX = Screen.width;
         int screenY = Screen.height;
-        Vector3 mouse = Input.mousePosition;
-        // マウス座標を画面中心を0, 0として-1~1に変換
+        Vector3 mouse = Input.mousePosition; // マウス座標を画面中心を0, 0として-1~1に変換
         mouse.x = mouse.x / screenX * 2 - 1;
         mouse.y = mouse.y / screenY * 2 - 1;
         Debug.Log(Input.mousePosition);
